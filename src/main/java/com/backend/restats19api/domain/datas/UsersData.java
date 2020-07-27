@@ -7,13 +7,7 @@ import lombok.Data;
 import java.util.List;
 import java.util.Set;
 
-public class UsersData extends Users {
-
-    public String getUsername() {
-        return super.getUsername();
-    }
-
-    public Set<Tasks> getTasks() {
-        return super.getTasks();
-    }
+public class UsersData {
+    String username;
+    String password;
 }
