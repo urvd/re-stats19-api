@@ -1,5 +1,6 @@
 package com.backend.restats19api.controllers;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -8,8 +9,12 @@ public class DefaultController {
 
     @GetMapping
     @ResponseBody
-    public String Hello(){
-        return "-- Hello the world !! --";
+    public ResponseEntity<?> Hello(){
+        try{
+            return ResponseEntity.ok("-- Hello the world !! --");
+        }catch (Exception e){
+            return  ResponseEntity.ok(e.getCause().getStackTrace());
+        }
     }
 }
 
