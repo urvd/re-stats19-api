@@ -1,4 +1,4 @@
-package com.backend.restats19api.domain;
+package com.backend.restats19api.domain.utils;
 
 public enum ErrorCode {
     NOT_FOUND("non trouvé"),
